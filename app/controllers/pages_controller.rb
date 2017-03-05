@@ -3,6 +3,20 @@ class PagesController < ApplicationController
   end
   def contact
   end
-  def projects
+  def seamos
+  end
+  def sonemos
+  end
+  def actuamos
+  end
+  def hablemos
+  end
+  def seamos2
+  end
+  def sonemos2
+  end
+  def actuamos2
+  end
+  def hablemos2
   end
 end

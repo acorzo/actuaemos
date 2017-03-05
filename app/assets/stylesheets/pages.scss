@@ -11,25 +11,27 @@ img {
    max-width: 100%;
 }
 
-/* cover */
 #cover {
-  background:  linear-gradient(-255deg, rgba(0, 0, 0, 0.15) 0%, rgba(40, 40, 45, 0.4) 40%),
-  image-url('bg-1.jpg') 25% 20% no-repeat;
-  background-size: cover;
   color: white;
-  height: 90vh;
+  height: 100vh;
   text-align: center;
   display: flex;
   align-items: center;
 }
 
-.vertical-center {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-  display: flex;
-  align-items: center;
+#background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 
-.card {
-  margin-bottom: 1em;
+.overlay{
+  background-color: rgba(0, 0, 0, 0.5);
 }
