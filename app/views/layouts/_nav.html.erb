@@ -3,7 +3,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="container">
-  <strong><%= link_to "ACTUEMOS", root_path, class: "navbar-brand" %> </strong>
+  <strong><%= link_to "¡ A C T U E M O S !", root_path, class: "navbar-brand" %> </strong>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav ml-auto mt-2 mt-md-0">
       <li class="nav-item active">
@@ -11,13 +11,13 @@
         <span class="sr-only">(current)</span>
       </li>
       <li class="nav-item">
-        <strong><a class="nav-link" href="#">SOÑEMOS</a></strong>
+        <strong><%= link_to "SOÑEMOS", "/sonemos", class: "nav-link" %></strong>
       </li>
       <li class="nav-item">
-        <strong><a class="nav-link" href="#">ACTUAMOS</a></strong>
+        <strong><%= link_to "ACTUAMOS", "/actuamos", class: "nav-link" %></strong>
       </li>
       <li class="nav-item">
-        <strong><a class="nav-link" href="#">HABLEMOS</a></strong>
+        <strong><%= link_to "HABLEMOS", "/hablemos", class: "nav-link" %></strong>
       </li>
     </ul>
   </div>

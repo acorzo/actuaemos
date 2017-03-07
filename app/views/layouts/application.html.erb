@@ -2,15 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Actuemos | Desarrollo Social y Humano</title>
+    <title>¡ACTUEMOS! | <%= @page_tittle %></title>
+    <meta name="description" content="<%= @page_description %>">
+	  <meta name="keywords" content="democracia,  politica, poder ciudadano">
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <!-- Favicon -->
-	  <%= favicon_link_tag 'soceh.ico' %>
+	  <%= favicon_link_tag 'actuemos.ico' %>
   </head>
 
   <body>
+    <%= render "layouts/nav" %> 
     <%= render "layouts/notifications" %>
     <%= yield %>
   </body>
