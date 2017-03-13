@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :forums do
+    resources :comments
+  end
   devise_for :users
   
   root 'pages#home'
