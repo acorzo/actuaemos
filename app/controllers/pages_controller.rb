@@ -7,8 +7,6 @@ class PagesController < ApplicationController
   end
   def seamos
   end
-  def sonemos
-  end
   def actuamos
   end
   def hablemos

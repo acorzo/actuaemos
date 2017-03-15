@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.create! id: 1, email: "acorzo@gmail.com", password: "acorzo", password_confirmation: "acorzo"
+
 Forum.create!(topic: "Salud", question: "¿Cuál es el sistema de salud de nuestros sueños?", user_id: 1 )
 Forum.create!(topic: "Educación", question: "¿Cuál es el tipo de educación de nuestros sueños?", user_id: 1 )
 Forum.create!(topic: "Trabajo", question: "¿Cómo soñamos nuestra condición económica?", user_id: 1 )

@@ -1,23 +1,11 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Topic:</strong>
-  <%= @forum.topic %>
-</p>
-
-<p>
-  <strong>Question:</strong>
+<div class="container">
+  
+<p class="my-3 text-center">
+  <strong><%= @forum.topic %></strong> -
   <%= @forum.question %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @forum.user %>
-</p>
+<%= render @forum.comments %>
+<%= render 'comments/form' %>
 
-<%= link_to 'Edit', edit_forum_path(@forum) %> |
-<%= link_to 'Back', forums_path %>
-
-<h3>Comments:</h3>
-    <p><%= render @forum.comments %></p>
-    <%= render 'comments/form' %>
+</div>

@@ -12,6 +12,9 @@ img {
 }
 
 #cover {
+  background:  linear-gradient(-255deg, rgba(255, 255, 255, 0.5) 0%, rgba(41, 43, 44, 0.5) 50%), 
+  image-url('bg-1.jpg') center top no-repeat;
+  background-size: cover;
   color: white;
   height: 100vh;
   text-align: center;
@@ -19,24 +22,17 @@ img {
   align-items: center;
 }
 
-#background {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  z-index: -100;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-
 .overlay{
-  background-color: rgba(93, 164, 87, 1);
+  background-color: rgba(40, 53, 147, 1);
 }
 
-.seamos{
+#navbarTogglerDemo02 {
+  a {
+    color: white;
+  }
+}
+
+.seamos-img {
   background: image-url('ciudadano1.png');
   background-repeat: no-repeat;
   background-size: cover;
