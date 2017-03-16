@@ -1,15 +1,26 @@
-<div class="container text-justify">
-  <h2 class="my-3">Soñemos y construyamos las mejores propuestas de la gente para la gente</h2>
-  <p>Nuestros sueños sobre el país desbordan esta realidad que los políticos corruptos nos han creado y ofrecido, 
-  vivimos en una Colombia, cerrada, hostil, intolerante y excluyente; desde este espacio puedes opinar sobre los principales temas que afectan significativamente nuestras vidas.</p>
+<div class="container">
+  <h2 class="my-3 text-center">Soñemos y construyamos las mejores propuestas de la gente para la gente</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <%= image_tag "woman1.jpg", class:"img-fluid" %>
+    </div>
+    <div class="col-md-4">
+      <%= image_tag "man2.jpg", class:"img-fluid" %>
+    </div>
+    <div class="col-md-4">
+      <%= image_tag "woman2.jpg", class:"img-fluid" %>
+    </div>
+  </div>
+  <br>
+  <p  class="text-justify">Nuestros sueños sobre el país desbordan esta realidad que los políticos corruptos nos han creado y ofrecido, 
+  vivimos en una Colombia, cerrada, hostil, intolerante y excluyente. <strong>Opina sobre los principales temas que afectan nuestras vidas.</strong></p>
   <%= link_to 'New Forum', new_forum_path %>
-  
   <div class="row">
     <% @forums.each do |forum| %>
     <div class="col-sm-6 my-2">
       <div class="card">
         <div class="card-block">
-          <h3 class="card-title"><%= forum.topic %></h3>
+          <h3 class="card-title text-uppercase"><%= forum.topic %></h3>
           <p class="card-text"><%= forum.question %></p>
           <%= link_to 'Participar', forum, class:"btn  btn-outline-primary" %>
           <%= link_to 'Editar', edit_forum_path(forum), class:"btn btn-outline-warning" %>
@@ -19,8 +30,4 @@
     </div>
     <% end %>
   </div>
-
-</div>  
-
-
-
+</div>

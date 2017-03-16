@@ -3,6 +3,14 @@ body {
   height: 100%;
 }
 
+h1, h2, h3, nav {
+  font-family: 'Handlee', cursive;
+}
+
+#cover h2{
+  font-size: 2.6em;
+}
+
 p {
   font-size: 1.2em;
 }
@@ -33,7 +41,11 @@ img {
 }
 
 .seamos-img {
-  background: image-url('ciudadano2.png');
+  background: image-url('act.svg');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#forum {
+  background-image: image-url("act.png");
 }

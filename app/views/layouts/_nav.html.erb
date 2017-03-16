@@ -8,13 +8,13 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
       <ul class="navbar-nav ml-auto mt-2 mt-md-0">
         <li class="nav-item">
-          <strong><%= link_to "SOÑEMOS", forums_path, class: "nav-link" %></strong>
+          <%= link_to "SOÑEMOS", forums_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <strong><%= link_to "ACTUAMOS", "/actuamos", class: "nav-link" %></strong>
+          <%= link_to "ACTUAMOS", "/actuamos", class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <strong><%= link_to "HABLEMOS", "/hablemos", class: "nav-link" %></strong>
+          <%= link_to "HABLEMOS", "/hablemos", class: "nav-link" %>
         </li>
       </ul>
       <ul class="navbar-nav">
@@ -27,10 +27,10 @@
           </li>
         <% else %>
           <li class="nav-item">
-          </li>
-            <%= link_to "REGISTRARSE", new_user_registration_path, class:"nav-link" %>
-          <li class="nav-item">
             <%= link_to "INGRESAR", new_user_session_path, class:"nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "REGÍSTRATE", new_user_registration_path, class:"nav-link" %>
           </li>
         <% end %>
       </ul>
