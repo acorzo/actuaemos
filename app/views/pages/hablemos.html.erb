@@ -1,7 +1,10 @@
 <div class="container">
   <div class="row">
-    <div class="col-12 col-lg-6 text-justify">
-      <p class="my-2">Si quieres hacer parte del cambio, estás decepcionado de la política tradicional y tienes vocación de servicio, <u>actívate en nuestra red</u></p>
+    <div class="col-12">
+      <h2 class="my-3">Quieres hacer parte del cambio y activarte en nuestra red</strong></h2>
+      <p> Si tienes vocación de servicio, estás decepcionado de la política tradicional o quieres colaborar en este proyecto, tenemos un lugar para tí en ACTUEMOS, puedes apoyarnos en cualquiera de los siguientes roles:</p>
+    </div>
+    <div class="col-12 col-sm-6 text-justify">
       <ul class="list-unstyled">
         <li class="media">
       		<%= image_tag "veedor.png", size: "64", class:"d-flex mr-3" %>
@@ -11,12 +14,16 @@
           </div>
         </li>
         <li class="media my-4">
-          <%= image_tag "voluntario.png", size: "64", class:"d-flex mr-3" %>
+          <%= image_tag "investigador.png", size: "64", class:"d-flex mr-3" %>
           <div class="media-body">
-            <h5 class="mt-0 mb-1">Voluntario</h5>
+            <h5 class="mt-0 mb-1">Investigador</h5>
             <p>Adelanta diferentes tipos de acciones de investigación, difusion en redes, logística, entre otros</p>
           </div>
         </li>
+      </ul>
+    </div>
+    <div class="col-12 col-sm-6 text-justify">
+      <ul class="list-unstyled">
         <li class="media">
           <%= image_tag "gestor.png", size: "64", class:"d-flex mr-3" %>
           <div class="media-body">
@@ -24,7 +31,7 @@
             <p>Administra recursos para hacer sostenible el proyecto, también puedes donar dinero o materiales</p>
           </div>
         </li>
-         <li class="media my-4">
+        <li class="media my-4">
           <%= image_tag "transformador.png", size: "64", class:"d-flex mr-3" %>
           <div class="media-body">
             <h5 class="mt-0 mb-1">Transformador</h5>
@@ -33,7 +40,38 @@
         </li>
       </ul>
     </div>
-    <div class="col-12 col-lg-6">
-    </div>
   </div>
 </div>
+
+
+<form> 
+  <div class="container">
+    <p>Contáctanos, si tienes dudas, quieres ser voluntario o necesitas ayuda para crear y promocionar tus videos. <strong>Siempre respondemos a todas las preguntas.</strong></p>
+    <br>
+    <div class="form-group row">
+      <label for="example-text-input" class="col-3 col-form-label">Nombres</label>
+      <div class="col-9">
+        <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-email-input" class="col-3 col-form-label">Email</label>
+      <div class="col-9">
+        <input class="form-control" type="email" value="bootstrap@example.com" id="example-email-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-text-input" class="col-3 col-form-label">Ciudad</label>
+      <div class="col-9">
+        <input class="form-control" type="text"  id="example-text-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-text-input" class="col-3 col-form-label">Mensaje</label>
+      <div class="col-9">
+        <input class="form-control" type="text"  id="example-text-input" placeholder="Esperamos saber de tí, escribenos y te contestaremos...">
+      </div>
+    </div>
+  <button type="submit" class="btn btn-primary">Enviar consulta</button>
+  </div>
+</form>
