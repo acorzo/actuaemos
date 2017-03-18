@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
   before_action :find_forum, only: [:create, :edit, :update, :destroy]
   before_action :find_comment, only: [:edit, :update, :destroy]
 
@@ -7,9 +6,9 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = @forum.comments.create(comment_params)
-    @comment.user_id = current_user.id
-
+    @comment = @forum.comments.build(comment_params)
+    @comment.user_id = current_user.id if user_signed_in?
+      
     if @comment.save
       redirect_to forum_path(@forum)
     else

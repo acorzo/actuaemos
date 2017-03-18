@@ -8,11 +8,11 @@
 
 User.create! id: 1, email: "acorzo@gmail.com", password: "acorzo", password_confirmation: "acorzo"
 
-Forum.create!(topic: "Salud", question: "¿Cuál es el sistema de salud de nuestros sueños?", user_id: 1 )
-Forum.create!(topic: "Educación", question: "¿Cuál es el tipo de educación de nuestros sueños?", user_id: 1 )
-Forum.create!(topic: "Trabajo", question: "¿Cómo soñamos nuestra condición económica?", user_id: 1 )
-Forum.create!(topic: "Seguridad", question: "¿Con qué tipo de seguridad soñamos?", user_id: 1 )
-Forum.create!(topic: "Medio Ambiente", question: "¿Con qué tipo de medio ambiente soñamos?", user_id: 1 )
-Forum.create!(topic: "Justicia", question: "¿Cuál es el tipo de Justicia de nuestros sueños?", user_id: 1 )
-Forum.create!(topic: "Democracia", question: "¿Cómo nos soñamos una nueva política?", user_id: 1 )
-Forum.create!(topic: "Otros", question: "¿Qué otros tipos de sueños tenemos para que todos podamos vivir bien en Colombia?", user_id: 1 )
+Forum.create!(topic: "Salud", question: "¿Cuál es el sistema de salud de nuestros sueños?")
+Forum.create!(topic: "Educación", question: "¿Cuál es el tipo de educación de nuestros sueños?")
+Forum.create!(topic: "Trabajo", question: "¿Cómo soñamos nuestra condición económica?")
+Forum.create!(topic: "Seguridad", question: "¿Con qué tipo de seguridad soñamos?")
+Forum.create!(topic: "Medio Ambiente", question: "¿Con qué tipo de medio ambiente soñamos?")
+Forum.create!(topic: "Justicia", question: "¿Cuál es el tipo de Justicia de nuestros sueños?")
+Forum.create!(topic: "Democracia", question: "¿Cómo nos soñamos una nueva política?")
+Forum.create!(topic: "Otros", question: "¿Qué otros tipos de sueños tenemos para que todos podamos vivir bien en Colombia?")

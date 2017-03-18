@@ -15,7 +15,7 @@ class ForumsController < ApplicationController
 
   # GET /forums/new
   def new
-    @forum = current_user.forums.build
+    @forum = Forum.new
   end
 
   # GET /forums/1/edit
@@ -25,7 +25,7 @@ class ForumsController < ApplicationController
   # POST /forums
   # POST /forums.json
   def create
-    @forum = @forum = current_user.forums.build(forum_params)
+   @forum = Forum.create(forum_params)
 
     respond_to do |format|
       if @forum.save
@@ -70,6 +70,6 @@ class ForumsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def forum_params
-      params.require(:forum).permit(:topic, :question, :user_id)
+      params.require(:forum).permit(:topic, :question)
     end
 end
