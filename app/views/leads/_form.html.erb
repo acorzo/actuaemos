@@ -1,0 +1,34 @@
+<section id="newsletter">
+<%= form_for(lead) do |f| %>
+  <% if lead.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
+
+      <ul>
+      <% lead.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="container"> 
+    <div class="row text-center">
+      <div class="col-10 offset-1">
+        <br>
+        <h4>Quiere recibir información de noticias y eventos de ¡Actuemos!</h4>
+        <br>
+        <div class="form-group">
+          <%= f.text_field :name, class:"form-control col-10 offset-1 text-center", placeholder:"Nombre y Apellido" %>
+          <br>
+          <%= f.email_field :email, class:"form-control col-10 offset-1 text-center", placeholder:"Ingrese su e-mail" %>
+          <small id="emailHelp" class="form-text text-muted">Nunca compartiremos su correo con otras personas.</small>
+        </div>
+        <div class="actions">
+          <%= f.submit "Enviar", class:"btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>  
+<% end %>
+</section>

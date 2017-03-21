@@ -14,8 +14,11 @@
 
   <body>
     <%= render "layouts/nav" %> 
-    <%# render "layouts/notifications" %>
+    <%= render "layouts/notifications" %>
     <%= yield %>
     <%= render "layouts/footer" %> 
+    <script>
+      $('#myModal').modal(options)
+    </script>
   </body>
 </html>

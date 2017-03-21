@@ -1,16 +1,10 @@
-
-
-<section id= "messages-devise">
-	<div class="container-fluid">
-	<% flash.each do |key, value| %>
-		<div class="alert alert-<%= key %> alert-dismissible fade show" role="alert">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			  <span aria-hidden="true">&times;</span>
-			</button>
-			<ul>
-				<li><%= value %></li>
-			</ul>
-		</div>
-	<% end %>
-	</div>
-</section>
+<% flash.each do |key, value| %>
+<div class="alert alert-<%= key %> alert-dismissible fade show" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  	<ul>
+			<li><%= value %></li>
+		</ul>
+</div>
+<% end %>
