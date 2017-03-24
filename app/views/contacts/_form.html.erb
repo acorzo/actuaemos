@@ -1,12 +1,15 @@
 <%= form_for(contact) do |f| %>
 
-<div class="container">
-<ul>
   <% contact.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+         <%= message %>
+    </div>
   <% end %>
-</ul>
-</div> 
+
+ 
 <div class="container">
 <p class="my-3 text-justify"><strong>Contáctanos</strong>, ¿tienes dudas?, ¿quieres ser voluntario pero necesitas más información?, ¿necesitas ayuda para crear y promocionar tus videos?; escribenos, siempre respondemos a todas las preguntas.</p>
   <div class="form-group row">
@@ -44,7 +47,7 @@
     </div> 
   </div>
 
-  <div class="actions">
+  <div class="actions text-center">
     <%= f.submit "Enviar", class:"btn btn-primary" %>
   </div>
 </div>

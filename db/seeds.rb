@@ -6,8 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create! id: 2, email: "drracerom@gmail.com", password: "actuemosracero", password_confirmation: "actuemosracero"
-
 Forum.create!(topic: "Salud", question: "¿Cuál es el sistema de salud de nuestros sueños?")
 Forum.create!(topic: "Educación", question: "¿Cuál es el tipo de educación de nuestros sueños?")
 Forum.create!(topic: "Trabajo", question: "¿Cómo soñamos nuestra condición económica?")
@@ -15,4 +13,3 @@ Forum.create!(topic: "Seguridad", question: "¿Con qué tipo de seguridad soñam
 Forum.create!(topic: "Medio Ambiente", question: "¿Con qué tipo de medio ambiente soñamos?")
 Forum.create!(topic: "Justicia", question: "¿Cuál es el tipo de Justicia de nuestros sueños?")
 Forum.create!(topic: "Democracia", question: "¿Cómo nos soñamos una nueva política?")
-Forum.create!(topic: "Otros", question: "¿Qué otros tipos de sueños tenemos para que todos podamos vivir bien en Colombia?")

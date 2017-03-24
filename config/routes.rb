@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  resources :contacts
+  resources :contacts, only: [:new, :create]
   resources :videos
-  resources :leads, only: [:new, :create]
-  
+
   resources :forums do
     resources :comments
   end
@@ -11,10 +10,8 @@ Rails.application.routes.draw do
   
   root 'pages#home'
   
-  get 'contact' => 'pages#contact'
   get 'nosotros' => 'pages#nosotros', as: :nosotros
   get 'sonemos' => 'pages#sonemos', as: :sonemos
-  get 'videolist' => 'pages#videolist', as: :videolist
   get 'herramientas' => 'pages#herramientas', as: :herramientas
   get 'hablemos' => 'pages#hablemos', as: :hablemos
 

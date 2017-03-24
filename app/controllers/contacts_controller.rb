@@ -28,9 +28,9 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to :back, notice: 'Contact was successfully created.' }
+        format.html { redirect_to :back, notice: 'Tus datos fueron enviados, muchas gracias por contáctarnos.' }
       else
-        format.html { render :new }
+        format.html { redirect_to :back, alert: 'Tu nombre, email y ciudad son campos obligatorios y no deben vacios.' }
       end
     end
   end
@@ -40,11 +40,9 @@ class ContactsController < ApplicationController
   def update
     respond_to do |format|
       if @contact.update(contact_params)
-        format.html { redirect_to :back, notice: 'Tus datos fueron enviados correctamnte, muchas gracias.' }
-        format.json { render :show, status: :ok, location: @contact }
+        format.html { redirect_to :back, notice: 'Tus datos estan actualizados.' }
       else
         format.html { render :edit }
-        format.json { render json: @contact.errors, status: :unprocessable_entity }
       end
     end
   end
