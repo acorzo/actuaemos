@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <h2 class="my-3 text-center">QUIERES HACER PARTE DEL CAMBIO Y ACTIVARTE EN NUESTRA RED</strong></h2>
+      <h3 class="my-3 text-center">QUIERES HACER PARTE DEL CAMBIO Y ACTIVARTE EN NUESTRA RED</strong></h3>
       <p> Si tienes vocación de servicio, estás decepcionado de la política tradicional o quieres colaborar en este proyecto, tenemos un lugar para tí en ACTUEMOS, puedes apoyarnos en cualquiera de los siguientes roles:</p>
     </div>
     <div class="col-12 col-sm-6 text-justify">
@@ -43,36 +43,4 @@
   </div>
 </div>
 
-
-<form> 
-  <div class="container">
-    
-    <p><strong>Contáctanos</strong>, ¿tienes dudas?, ¿quieres ser voluntario pero necesitas más información?, ¿necesitas ayuda para crear y promocionar tus videos?; escribenos, siempre respondemos a todas las preguntas.</p>
-    <br>
-    <div class="form-group row">
-      <label for="example-text-input" class="col-3 col-form-label">Nombres</label>
-      <div class="col-9">
-        <input class="form-control" type="text" placeholder="Nombre y Apellido" id="example-text-input">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="example-email-input" class="col-3 col-form-label">Email</label>
-      <div class="col-9">
-        <input class="form-control" type="email" placeholder="tucorreo@example.com" id="example-email-input">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="example-text-input" class="col-3 col-form-label">Ciudad</label>
-      <div class="col-9">
-        <input class="form-control" type="text"  placeholder="Tú Ciudad" id="example-text-input" >
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="example-text-input" class="col-3 col-form-label">Mensaje</label>
-      <div class="col-9">
-        <input class="form-control" type="text"  id="example-text-input" placeholder="Esperamos saber de tí, escribenos y te contestaremos...">
-      </div>
-    </div>
-  <button type="submit" class="btn btn-primary">Enviar consulta</button>
-  </div>
-</form>
+<%= render partial: "contacts/form", locals: { contact: @contact } %>

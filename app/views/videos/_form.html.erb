@@ -1,4 +1,5 @@
 <%= form_for(video) do |f| %>
+<div class="container">
   <% if video.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(video.errors.count, "error") %> prohibited this video from being saved:</h2>
@@ -11,37 +12,46 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
+  <div class="form-group row">
+    <%= f.label :title, class:"col-2 col-form-label" %>
+    <div class="col-10">
+      <%= f.text_field :title, class:"form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
+  <div class="form-group row">
+    <%= f.label :description, class:"col-2 col-form-label" %>
+    <div class="col-10">
+      <%= f.text_area :description, class:"form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :url %>
-    <%= f.text_field :url %>
+  <div class="form-group row">
+    <%= f.label :url, class:"col-2 col-form-label" %>
+    <div class="col-10">
+      <%= f.text_field :url, class:"form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :slug %>
-    <%= f.text_field :slug %>
+  <div class="form-group row">
+    <%= f.label :slug, class:"col-2 col-form-label" %>
+    <div class="col-10">
+      <%= f.text_field :slug, class:"form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :position %>
+  <div class="form-group row">
+    <%= f.label :position, class:"col-2 col-form-label" %>
     <%= f.number_field :position %>
   </div>
 
-  <div class="field">
-    <%= f.label :visibility %>
+  <div class="form-group row">
+    <%= f.label :visibility, class:"col-2 col-form-label" %>
     <%= f.check_box :visibility %>
   </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
 <% end %>

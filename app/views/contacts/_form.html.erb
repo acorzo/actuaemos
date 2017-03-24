@@ -1,0 +1,51 @@
+<%= form_for(contact) do |f| %>
+
+<div class="container">
+<ul>
+  <% contact.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+</ul>
+</div> 
+<div class="container">
+<p class="my-3 text-justify"><strong>Contáctanos</strong>, ¿tienes dudas?, ¿quieres ser voluntario pero necesitas más información?, ¿necesitas ayuda para crear y promocionar tus videos?; escribenos, siempre respondemos a todas las preguntas.</p>
+  <div class="form-group row">
+    <%= f.label :name, "Nombre", class:"col-3 col-form-label" %>
+    <div class="col-9">
+      <%= f.text_field :name, class:"form-control", placeholder:"Nombre y Apellido" %>
+    </div> 
+  </div>
+  
+  <div class="form-group row">
+    <%= f.label :email, "e-mail", class:"col-3 col-form-label" %>
+    <div class="col-9">
+      <%= f.email_field :email, class:"form-control", placeholder:"tucorreo@mail.com" %>
+    </div> 
+  </div>
+  
+  <div class="form-group row">
+    <%= f.label :phone, "Teléfono", class:"col-3 col-form-label" %>
+    <div class="col-9">
+      <%= f.phone_field :phone, class:"form-control", placeholder:"Teléfono fijo o móvil" %>
+    </div> 
+  </div>
+  
+  <div class="form-group row">
+    <%= f.label :city, "Ciudad", class:"col-3 col-form-label" %>
+    <div class="col-9">
+      <%= f.text_field :city, class:"form-control", placeholder:"Ciudad" %>
+    </div> 
+  </div>
+  
+  <div class="form-group row">
+    <%= f.label :message, "Mensaje", class:"col-3 col-form-label" %>
+    <div class="col-9">
+      <%= f.text_area :message, class:"form-control", placeholder:"Esperamos saber de tí, escríbenos y te contestaremos..." %>
+    </div> 
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Enviar", class:"btn btn-primary" %>
+  </div>
+</div>
+<% end %>

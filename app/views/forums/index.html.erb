@@ -1,18 +1,19 @@
 <div class="container">
-  <h2 class="my-3 text-center">CONSTRUYAMOS LAS PROPUESTAS DE LA GENTE PARA LA GENTE</h2>
+  <h3 class="my-3 text-center">CONSTRUYAMOS LAS PROPUESTAS DE LA GENTE PARA LA GENTE</h3>
   <p  class="text-justify">Nuestros sueños sobre el país desbordan esta realidad que los políticos corruptos nos han creado y ofrecido, 
   vivimos en una Colombia, cerrada, hostil, intolerante y excluyente. <strong>Opina sobre los principales temas que afectan nuestras vidas.</strong></p>
-  <%= link_to 'New Forum', new_forum_path %>
   <div class="row">
     <% @forums.each do |forum| %>
     <div class="col-sm-6 my-2">
-      <div class="card">
+      <div class="card card-outline-primary">
         <div class="card-block">
           <h3 class="card-title text-uppercase"><%= forum.topic %></h3>
           <p class="card-text"><%= forum.question %></p>
-          <%= link_to 'Participar', forum, class:"btn  btn-outline-primary" %>
-          <%= link_to 'Editar', edit_forum_path(forum), class:"btn btn-outline-warning" %>
-          <%= link_to 'Eliminar', forum, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger"  %>
+            <%= link_to 'Participar', forum, class:"btn  btn-outline-primary" %>
+          <% if current_user && current_user.admin? %>
+            <%= link_to 'Editar', edit_forum_path(forum), class:"btn btn-outline-warning" %>
+            <%= link_to 'Eliminar', forum, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger"  %>
+          <% end%>        
         </div>
       </div>
     </div>

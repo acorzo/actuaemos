@@ -1,5 +1,9 @@
 <br>
-
+<% if current_user && current_user.admin? %>
+  <div class="text-center">
+ 
+</div>
+<% end %>
 <div class="container">
   <div class="row">
     <% @videos.each do |video| %>
@@ -8,10 +12,11 @@
         <iframe class="embed-responsive-item" src="//www.youtube.com/embed/<%= video.url %>?rel=0" allowfullscreen></iframe>
       </div>
         <% if current_user && current_user.admin? %>
-          <%= link_to 'New Video', new_video_path, class: "btn btn-primary" %>
-          <%= link_to 'Show', video %>
-          <%= link_to 'Edit', edit_video_path(video) %>
-          <%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <%= link_to 'Show', video, type:"button", class:"btn btn-secondary" %>
+          <%= link_to 'Edit', edit_video_path(video), type:"button", class:"btn btn-secondary" %>
+          <%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' }, type:"button", class:"btn btn-secondary" %>
+        </div>
         <% end %>
   	</div>
     <% end %>
