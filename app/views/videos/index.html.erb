@@ -1,10 +1,10 @@
 <br>
-<% if current_user && current_user.admin? %>
-  <div class="text-center">
- 
-</div>
-<% end %>
 <div class="container">
+  <% if current_user && current_user.admin? %>
+    <div class="text-center">
+      <%= link_to 'Nuevo Video', new_video_path, class:"btn btn-primary btn-block" %>
+    </div>
+  <% end %>
   <div class="row">
     <% @videos.each do |video| %>
     <div class="col-md-4 my-3">

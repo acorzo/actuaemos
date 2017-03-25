@@ -2,10 +2,14 @@
   <h3 class="my-3 text-center">CONSTRUYAMOS LAS PROPUESTAS DE LA GENTE PARA LA GENTE</h3>
   <p  class="text-justify">Nuestros sueños sobre el país desbordan esta realidad que los políticos corruptos nos han creado y ofrecido, 
   vivimos en una Colombia, cerrada, hostil, intolerante y excluyente. <strong>Opina sobre los principales temas que afectan nuestras vidas.</strong></p>
+  <% if current_user && current_user.admin? %>
+    <div class="text-center">
+      <%= link_to 'Nuevo Foro', new_forum_path, class:"btn btn-primary btn-block" %>
+  <% end %>
   <div class="row">
     <% @forums.each do |forum| %>
     <div class="col-sm-6 my-2">
-      <div class="card card-outline-primary">
+      <div class="card card-outline-secondary">
         <div class="card-block">
           <h3 class="card-title text-uppercase"><%= forum.topic %></h3>
           <p class="card-text"><%= forum.question %></p>
