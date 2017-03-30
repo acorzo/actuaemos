@@ -6,6 +6,7 @@ class ContactsController < ApplicationController
   # GET /contacts.json
   def index
     @contacts = Contact.all
+    @page_title = "Contactos"
   end
 
   # GET /contacts/1

@@ -5,6 +5,7 @@ class VideosController < ApplicationController
   # GET /videos.json
   def index
     @videos = Video.newest
+    @page_title = "Videos"
   end
 
   # GET /videos/1

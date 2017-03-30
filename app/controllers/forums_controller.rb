@@ -6,6 +6,7 @@ class ForumsController < ApplicationController
   # GET /forums.json
   def index
     @forums = Forum.all
+    @page_title = "Soñemos"
   end
 
   # GET /forums/1
