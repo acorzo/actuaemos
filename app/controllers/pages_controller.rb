@@ -7,6 +7,7 @@ class PagesController < ApplicationController
     @page_tittle = "Somos el cambio"
   end
   def herramientas
+    @page_tittle = "Herramientas"
   end
   def hablemos
     @page_tittle = "Hablemos"

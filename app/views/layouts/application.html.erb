@@ -8,8 +8,7 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <!-- Favicon -->
-	  <%= favicon_link_tag 'actuemos.ico' %>
+	  <!--<%= favicon_link_tag 'actuemos.ico' %>-->
   </head>
 
   <body>
@@ -17,8 +16,5 @@
     <%= render "layouts/notifications" %>
     <%= yield %>
     <%= render "layouts/footer" %> 
-    <script>
-      $('#myModal').modal(options)
-    </script>
   </body>
 </html>

@@ -1,29 +1,17 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <h2 class="my-3 text-center">INSTRUMENTOS PARA EL PROTAGONISMO CIUDADANO</strong></h2>
+      <h3 class="my-3 text-center">INSTRUMENTOS PARA EL PROTAGONISMO CIUDADANO</strong></h3>
       <p class="text-justify">Necesitamos un conjunto de  técnicas, de herramientas, de instrumentos concretos que nos posibiliten ACTUAR  al asumir un protagonismo ciudadano desde la propia cotidianidad, sacudiéndonos de la indiferencia y generando conciencia colectiva desvelando el funcionamiento de los poderosos de nuestro país.
     </div>    
   </div>
-  <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Tipo</th>
-          <th>Nombre</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td> <i class="fa fa-file-image-o" aria-hidden="true"></i> </td>
-          <td>Árbol de Poder - Los mismos de siempre</td>
-          <td><%= link_to "Descargar", "https://www.dropbox.com/s/qn0alrsxsypurva/mapa-poder.jpg?dl=1" %></td>
-        </tr>
-      </tbody>
-    </table>
-</div>  
 
-
-    
+<div class="card-columns">
+  <div class="card">
+    <%= image_tag "arbol-poder", class:"card-img-top", size:"!60x242" %>
+    <div class="card-block">
+      <h4 class="card-title">Árbol de Poder - Los mismos de siempre</h4>
+      <%= link_to "Descargar", "https://www.dropbox.com/s/qn0alrsxsypurva/mapa-poder.jpg?dl=1", class:"btn btn-primary btn-block" %>
+    </div>
+  </div>
+</div>
