@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
   def create
     @comment = @forum.comments.build(comment_params)
     @comment.user_id = current_user.id if user_signed_in?
-      
+
     if @comment.save
       redirect_to forum_path(@forum)
     else

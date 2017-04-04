@@ -32,7 +32,7 @@ class ContactsController < ApplicationController
       if @contact.save
         format.html { redirect_to :back, notice: 'Tus datos fueron enviados, muchas gracias por contáctarnos.' }
       else
-        format.html { redirect_to :back, alert: 'Tu nombre, email y ciudad son campos obligatorios y no deben vacios.' }
+        format.html { redirect_to :back, alert: 'Tu nombre, email y ciudad son campos obligatorios y no deben estar vacios.' }
       end
     end
   end

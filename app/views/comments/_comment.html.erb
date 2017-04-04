@@ -1,7 +1,7 @@
 <div class="media my-4">
   <i class="fa fa-user-circle-o fa-3x d-flex mr-3" aria-hidden="true"></i>
   <div class="media-body">
-    <h5 class="mt-0"> Comentado hace - <%= time_ago_in_words(comment.created_at) %></h5>
+    <h5 class="mt-0"> Comentado: <%= time_ago_in_words(comment.created_at) %> por </h5>
     <%= comment.content %>
   </div>
   <div class="links">
@@ -12,6 +12,3 @@
   </div>
 </div>
 
-
-<i class="fa fa-user-o" aria-hidden="true"></i>
-<i class="fa fa-user-secret" aria-hidden="true"></i>
