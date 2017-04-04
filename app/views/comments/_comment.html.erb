@@ -1,12 +1,12 @@
 <div class="media my-4">
   <i class="fa fa-user-circle-o fa-3x d-flex mr-3" aria-hidden="true"></i>
   <div class="media-body">
-    <h5 class="mt-0"> Comentado: <%= time_ago_in_words(comment.created_at) %> por </h5>
-    <%= comment.content %>
+    <h5 class="mt-0"> <%= comment.author %> - <span class="badge badge-default"><%= time_ago_in_words(comment.created_at) %></span></h5>
+    <p><Strong><%= comment.title %>:</Strong> <%= comment.content %></p>
   </div>
   <div class="links">
     <% if current_user && current_user.admin? %>
-      <%= link_to 'Edit', edit_forum_comment_path(comment.forum, comment) %>
+      <%= link_to 'Editar', edit_forum_comment_path(comment.forum, comment) %>
       <%= link_to 'Delete', forum_comment_path(comment.forum, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
   </div>
