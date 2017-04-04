@@ -1,15 +1,17 @@
 <div class="media my-4">
-  <i class="fa fa-comments-o fa-3x d-flex mr-3" aria-hidden="true"></i>
+  <i class="fa fa-user-circle-o fa-3x d-flex mr-3" aria-hidden="true"></i>
   <div class="media-body">
     <h5 class="mt-0"> Comentado hace - <%= time_ago_in_words(comment.created_at) %></h5>
     <%= comment.content %>
   </div>
   <div class="links">
-    <% if user_signed_in? %>
-      <% if current_user.id == comment.user_id %>
-        <%= link_to 'Edit', edit_forum_comment_path(comment.forum, comment) %>
-        <%= link_to 'Delete', forum_comment_path(comment.forum, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
-      <% end %>
+    <% if current_user && current_user.admin? %>
+      <%= link_to 'Edit', edit_forum_comment_path(comment.forum, comment) %>
+      <%= link_to 'Delete', forum_comment_path(comment.forum, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
     <% end %>
   </div>
 </div>
+
+
+<i class="fa fa-user-o" aria-hidden="true"></i>
+<i class="fa fa-user-secret" aria-hidden="true"></i>

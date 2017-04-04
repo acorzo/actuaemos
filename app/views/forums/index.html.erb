@@ -3,7 +3,6 @@
   <p  class="text-justify">Nuestros sueños sobre el país desbordan esta realidad que los políticos corruptos nos han creado y ofrecido, 
   vivimos en una Colombia, cerrada, hostil, intolerante y excluyente. <strong>Opina sobre los principales temas que afectan nuestras vidas.</strong></p>
   <% if current_user && current_user.admin? %>
-    <div class="text-center">
       <%= link_to 'Nuevo Foro', new_forum_path, class:"btn btn-primary btn-block" %>
   <% end %>
   <div class="row">
@@ -11,12 +10,17 @@
     <div class="col-sm-6 my-2">
       <div class="card card-outline-secondary">
         <div class="card-block">
-          <h3 class="card-title text-uppercase"><%= forum.topic %></h3>
-          <p class="card-text"><%= forum.question %></p>
-            <%= link_to 'Participar', forum, class:"btn  btn-outline-primary" %>
+        <h3 class="card-title text-uppercase">
+          <i class="fa fa-comments-o" aria-hidden="true"></i>
+          <%= forum.topic %>
+          <small class="text-capitalize text-muted float-right">
+          <%= pluralize(forum.comments.count, 'Comentario') %></small></h3> 
+          <p class="card-text">
+            <%= link_to '<i class="fa fa-plus" aria-hidden="true"></i>'.html_safe, forum, class:"btn btn-outline-primary" %>
+            <%= forum.question %></p>
           <% if current_user && current_user.admin? %>
-            <%= link_to 'Editar', edit_forum_path(forum), class:"btn btn-outline-warning" %>
-            <%= link_to 'Eliminar', forum, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger"  %>
+            <%= link_to '<i class="fa fa-pencil" aria-hidden="true"></i>'.html_safe, edit_forum_path(forum), class:"btn btn-outline-warning" %>
+            <%= link_to '<i class="fa fa-trash-o" aria-hidden="true"></i>'.html_safe, forum, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-danger"  %>
           <% end%>        
         </div>
       </div>
