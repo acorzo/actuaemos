@@ -17,15 +17,6 @@
 		    <%= form.text_area :content, size: "100x5", class: "form-control" %>
       </div>
   </div>
-  <% if current_user && current_user.admin? %>
-  <div class="form-group row">
-    <%= form.label :feedback, "Respuesta", class: "col-sm-1 col-form-label" %>
-      <div class="col-sm-11">
-		    <%= form.text_area :feedback, size: "100x5", class: "form-control" %>
-      </div>
-  </div>
-  <% end %>
-
   <div class="form-group row">
 		<%= form.submit "Comentar", class: "btn btn-primary" %>
 	</div>

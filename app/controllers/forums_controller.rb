@@ -30,7 +30,7 @@ class ForumsController < ApplicationController
 
     respond_to do |format|
       if @forum.save
-        format.html { redirect_to @forum, notice: 'Forum was successfully created.' }
+        format.html { redirect_to @forum, notice: 'Haz creado un nuevo debate' }
         format.json { render :show, status: :created, location: @forum }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class ForumsController < ApplicationController
   def update
     respond_to do |format|
       if @forum.update(forum_params)
-        format.html { redirect_to @forum, notice: 'Forum was successfully updated.' }
+        format.html { redirect_to @forum, notice: 'El foro fue actualizado' }
         format.json { render :show, status: :ok, location: @forum }
       else
         format.html { render :edit }
