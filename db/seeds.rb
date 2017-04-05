@@ -12,4 +12,4 @@ Forum.create!(topic: "Trabajo", question: "¿Cómo soñamos nuestra condición e
 Forum.create!(topic: "Seguridad", question: "¿Con qué tipo de seguridad soñamos?")
 Forum.create!(topic: "Medio Ambiente", question: "¿Con qué tipo de medio ambiente soñamos?")
 Forum.create!(topic: "Justicia", question: "¿Cuál es el tipo de Justicia de nuestros sueños?")
-Forum.create!(topic: "Democracia", question: "¿Cómo nos soñamos una nueva política?")AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
+Forum.create!(topic: "Democracia", question: "¿Cómo nos soñamos una nueva política?")

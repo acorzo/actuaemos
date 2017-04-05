@@ -1,14 +1,27 @@
-<div class="media my-4">
-  <i class="fa fa-user-circle-o fa-3x d-flex mr-3" aria-hidden="true"></i>
+<div class="media">
+  <i class="fa fa-user-circle-o fa-3x d-flex mr-3 text-muted" aria-hidden="true"></i>
   <div class="media-body">
-    <h5 class="mt-0"> <%= comment.author %> - <span class="badge badge-default"><%= time_ago_in_words(comment.created_at) %></span></h5>
-    <p><Strong><%= comment.title %>:</Strong> <%= comment.content %></p>
-  </div>
-  <div class="links">
-    <% if current_user && current_user.admin? %>
-      <%= link_to 'Editar', edit_forum_comment_path(comment.forum, comment) %>
-      <%= link_to 'Delete', forum_comment_path(comment.forum, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <h5 class="mt-0"> <%= comment.author %>  <span class="badge badge-warning"><%= time_ago_in_words(comment.created_at) %></span></h5></h5>
+    <p><%= comment.content %></p>
+    
+    <% if comment.feedback? %>
+    <div class="media mt-3">
+      <i class="fa fa-commenting-o fa-3x d-flex pr-3 text-success" aria-hidden="true"></i>
+      <div class="media-body">
+        <h5 class="mt-0">Moderador ACTUEMOS</h5>
+        <p><%= comment.feedback %></p>
+      </div>
+    </div>
     <% end %>
   </div>
 </div>
+<div class="float-right">
+  <% if current_user && current_user.admin? %>
+    <%= link_to 'Responder', edit_forum_comment_path(comment.forum, comment), class:"btn btn-success" %>
+    <%= link_to 'Eliminar', forum_comment_path(comment.forum, comment), method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %>
+  <% end %>
+</div>
+<br>
 
+
+  

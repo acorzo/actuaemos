@@ -14,7 +14,6 @@ class CommentsController < ApplicationController
     else
       render 'new'
     end
-
   end
 
   def edit
@@ -36,7 +35,7 @@ class CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:content, :forum_id, :title, :author )
+    params.require(:comment).permit(:content, :forum_id, :title, :author, :feedback)
   end
 
   def find_forum

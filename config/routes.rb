@@ -8,6 +8,10 @@ Rails.application.routes.draw do
     resources :comments
   end
   
+  resources :comments do
+    resources :replies
+  end
+  
   devise_for :users, :path => '', :path_names => { :sign_in => "login", :sign_out => "logout", :sign_up => "register" }
 
   root 'pages#home'
